@@ -1,5 +1,4 @@
 body {
-  background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
   padding: 20px auto;
   margin: 100px auto;
   max-width: 700px;
@@ -29,6 +28,7 @@ li {
   list-style: none;
 }
 .weather-app {
+  background: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
   display: block;
   border: 1px solid rgb(250, 197, 133);
   border-radius: 10px;
@@ -50,4 +50,5 @@ li {
 }
 footer {
   font-size: 11px;
+
 }

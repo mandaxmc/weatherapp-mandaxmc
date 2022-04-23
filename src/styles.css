@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(75, 245, 194);
+}
+.search-form {
+  margin-bottom: 20px;
+}
+h1 {
+  color: rgb(250, 197, 133);
+  font-family: "Google Sans", Roboto, arial, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+}
+h2 {
+  color: rgb(154, 160, 166);
+  font-family: Roboto, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+ul {
+  padding: 0 0 15px;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.weather-app {
+  display: block;
+  border: 1px solid rgb(250, 197, 133);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+.temperature {
+  font-size: 50px;
+  font-weight: 600;
+}
+.sun {
+  font-size: 50px;
+  color: rgb(32, 116, 88);
+}
+.units {
+  position: relative;
+  top: -30px;
+}

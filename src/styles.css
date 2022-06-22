@@ -39,15 +39,22 @@ li {
 .temperature {
   font-size: 50px;
   font-weight: 600;
+  color: black;
+    cursor: default;
 }
 
 
 .units {
+  color: black;
+  cursor: default;
   position: relative;
   top: -30px;
 }
+
+
 footer {
   padding-left: 20px;
   font-size: 11px;
 
 }
+

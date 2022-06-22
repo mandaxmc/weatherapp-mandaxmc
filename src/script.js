@@ -30,6 +30,8 @@ function displayWeatherCondition(response) {
 
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  celsiusTemperature = response.data.main.temp;
+
 }
 
 function searchCity(city) {
@@ -59,6 +61,18 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function showFahrenheitConvert(event) {
+  event.preventDefault();
+let fahrenheitConversition = (celsiusTemperature * 9)/5+32;
+let temperatureElement = document.querySelector("#temp-convert");
+temperatureElement.innerHTML = Math.round (fahrenheitConversition);
+}
+
+function showCelsiusConvert(event) {
+  event.preventDefault();
+let temperatureElement = document.querySelector("#temp-convert");
+temperatureElement.innerHTML = Math.round (celsiusTemperature);
+}
 
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
@@ -70,7 +84,14 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector ("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+let celsiusTemperature = null; 
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitConvert);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusConvert);
 
 searchCity("Gallup");
-
 

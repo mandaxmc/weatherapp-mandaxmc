@@ -16,13 +16,20 @@ let day = days[dayIndex];
   return `${day} ${hours}:${minutes}`;
 }
 
+let iconElement = document.querySelector("#icon")
+
 function displayWeatherCondition(response) {
   console.log (response.data);
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp-convert").innerHTML = Math.round (response.data.main.temp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round (response.data. wind.speed);
+  document.querySelector("#wind").innerHTML = Math.round (response.data.wind.speed);
   document.querySelector("#weather-description").innerHTML= response.data.weather[0].main;
+
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
+
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
 }
 
 function searchCity(city) {

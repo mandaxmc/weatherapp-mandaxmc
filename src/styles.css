@@ -40,10 +40,8 @@ li {
   font-size: 50px;
   font-weight: 600;
 }
-.sun {
-  font-size: 50px;
-  color: rgb(32, 116, 88);
-}
+
+
 .units {
   position: relative;
   top: -30px;
